@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MayorMenor</title>
+    <script type="text/javascript">
+        let veces = parseInt(prompt("¿Cuantos numeros vas a introducir?"));
+        let numeros = [];
+        contador = 0;
+
+        while(contador<veces){
+            let numero = parseInt(prompt("Introduce un numero"));
+            numeros.push(numero);
+            contador++;
+        }
+        let mayor = numeros[0];
+        let menor = numeros[0];
+        for (let i=0;i<numeros.length;i++){
+            if (mayor<numeros[i]){
+                mayor=numeros[i];
+            }
+            if (menor>numeros[i]){
+                menor=numeros[i];
+            }
+        }
+        console.log("Mayor : "+mayor +" Menor : "+menor);
+
+        function promedio(numeros) {
+            let suma = 0;
+            for (value of numeros){
+                suma+=value;
+            }
+            console.log("El promedio es : "+suma/numeros.length)
+        }
+        promedio(numeros);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
